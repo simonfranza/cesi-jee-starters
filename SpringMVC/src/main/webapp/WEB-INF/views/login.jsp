@@ -5,17 +5,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>
-	<h2>Hello padawan</h2>
-	<p>Welcome to the wonderful world of Java EE<p>
-       <form:form action="#" modelAttribute="student" method="post">
-             Name : <form:input type="text" path="fullName" />
-            <br />
-             Country : <form:input type="text" path="city" />
-           <br />
-             <button type="submit">Login</button>
-        </form:form>
+	<h2>Hello, there</h2>
+   <form:form action="#" modelAttribute="user" method="post">
+        Username : <form:input type="text" path="username" />
+        <br />
+        Password : <form:input type="password" path="password" />
+        <br />
+        <button type="submit">Login</button>
+    </form:form>
 </body>
 </html>
