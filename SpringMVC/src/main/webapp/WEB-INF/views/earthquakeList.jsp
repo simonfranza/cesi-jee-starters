@@ -17,8 +17,8 @@
         <c:out value="${earthquake.country}" />
         <c:out value="${earthquake.date}" />
         <c:out value="${earthquake.intensity}" />
-        <a href="earthquake/delete?id=${earthquake.id}">Remove</a>
         <a href="earthquake/edit?id=${earthquake.id}">Edit</a>
+        <a href="earthquake/delete?id=${earthquake.id}">Remove</a>
     </li>
 </c:forEach>
 </ul>

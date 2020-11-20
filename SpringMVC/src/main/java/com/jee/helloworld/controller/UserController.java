@@ -23,7 +23,6 @@ public class UserController {
 
 	@GetMapping("/login")
 	public String login(Model model) {
-		//Next line is mandatory for the form to work
 		model.addAttribute("user", new User());
 		return "login";
 	}

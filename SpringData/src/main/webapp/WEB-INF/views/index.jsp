@@ -11,8 +11,7 @@
 		<div class="col-md-offset-1 col-md-10">
 			<h2>School Manager</h2>
 			<hr />
-
-	<input type="button" value="Add Student"
+		<input type="button" value="Add Student"
 				onclick="window.location.href='create'; return false;"
 				class="btn btn-primary" />
 				<br/><br/>

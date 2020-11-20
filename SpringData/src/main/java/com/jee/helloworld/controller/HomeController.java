@@ -1,13 +1,12 @@
 package com.jee.helloworld.controller;
 
 import com.jee.helloworld.model.Student;
+import com.jee.helloworld.model.Survey;
 import com.jee.helloworld.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +30,35 @@ public class HomeController {
     public String create(Model model) {
         //Next line is mandatory for the form to work
         model.addAttribute("student", new Student());
-        return "add";
+        return "studentForm";
     }
 
+    @PostMapping(path = "/create")
+    public String create(@ModelAttribute Student pStudent){
+        studentRepository.save(pStudent);
+
+        return "redirect:/";
+    }
+
+    @GetMapping("/student/update")
+    public String update(Model pModel, @RequestParam("studentId") int studentId){
+        Student student = studentRepository.findOne(studentId);
+        pModel.addAttribute("student", student);
+
+        return "studentForm";
+    }
+
+    @PostMapping(path = "/student/update")
+    public String update(@ModelAttribute Student pStudent){
+        studentRepository.save(pStudent);
+
+        return "redirect:/";
+    }
+
+    @GetMapping(path = "/student/delete")
+    public String delete(@RequestParam("studentId") int studentId) {
+        studentRepository.delete(studentId);
+
+        return "redirect:/";
+    }
 }
