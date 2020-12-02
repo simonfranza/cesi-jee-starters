@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringJPA" />
         <module name="SpringData" />
+        <module name="School" />
         <module name="HelloWorld" />
       </profile>
     </annotationProcessing>

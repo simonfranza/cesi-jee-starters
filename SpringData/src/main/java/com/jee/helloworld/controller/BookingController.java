@@ -1,9 +1,6 @@
 package com.jee.helloworld.controller;
 
 import com.jee.helloworld.model.Booking;
-import com.jee.helloworld.model.Flight;
-import com.jee.helloworld.model.Survey;
-import com.jee.helloworld.model.Traveller;
 import com.jee.helloworld.repository.BookingRepository;
 import com.jee.helloworld.repository.FlightRepository;
 import com.jee.helloworld.repository.TravellerRepository;
